@@ -5,6 +5,9 @@ var PORT = process.env.PORT || 3000;
 
 app.get('/api/whoami', function(req, res){
 	var ip = req.ip
+	var lang = req.headers['accept-language'].split(",")[0]
+
+	console.log(lang)
 
 	console.log(ip)
 
